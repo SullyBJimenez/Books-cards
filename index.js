@@ -1,24 +1,3 @@
-// import './books.js';
-
-const React = require("react");
-
-// window.addEventListener('load', () => {
-//     createBookList();
-// });
-
-// async function createBookList(){
-//     const response = await fetch('./books.json');
-//     const json = await response.json();
-//     const books = document.getElementById('books');
-
-//     json.books.forEach((book) => {
-//         const element = document.createElement('mit-book');
-//         element.book = book;
-//         books.appendChild(element);
-        
-//     });
-// }
-
 function App() {
     const [data, setData] = React.useState(null);
     const [loaded, setLoaded] = React.useState(false);
@@ -35,7 +14,11 @@ function App() {
     console.log('loaded:', loaded, 'data:', data);
 
     return(<>
-        {loaded && data.books.map((book, i) => <Book data={book} key={i}/>)}
+        <div className="container">
+            <h1>React Componants</h1>
+            {loaded && data.books.map((book, i) => <Book data={book} key={i}/>)}
+        </div>
+        
         </>);
 }
 
