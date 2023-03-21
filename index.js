@@ -16,7 +16,13 @@ function App() {
     return(<>
         <div className="container">
             <h1>React Componants</h1>
-            {loaded && data.books.map((book, i) => <Book data={book} key={i}/>)}
+            {loaded && data.books.map((book, i) => <mit-book 
+                title={book.title}
+                subtitle={book.subtitle}
+                author={book.author}
+                publisher={book.publisher}
+                description={book.description}
+                key={i}/>)}
         </div>
         
         </>);
